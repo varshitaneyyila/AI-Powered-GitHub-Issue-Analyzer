@@ -13,7 +13,7 @@ type Tab = "analyze" | "history" | "favorites";
 
 export default function App() {
   const [tab, setTab] = useState<Tab>("analyze");
-  const [repoUrl, setRepoUrl] = useState("https://github.com/octocat/Hello-World");
+  const [repoUrl, setRepoUrl] = useState("");
   const [data, setData] = useState<RepoIssuesResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
