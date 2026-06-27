@@ -2,7 +2,10 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.config import settings
 from app.routers import repos, analysis, stats, history, favorites
+from app.database import Base, engine
+from app.models.analysis_history import AnalysisHistory
 
+Base.metadata.create_all(bind=engine)
 app = FastAPI(
     title="AI-Powered GitHub Issue Analyzer API",
     description="Week 1: fetches GitHub repo issues. AI + DB + charts added in later weeks.",

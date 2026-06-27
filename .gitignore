@@ -16,6 +16,7 @@ build/
 # Python
 *.sqlite3
 *.db
+*.tsbuildinfo
 
 # OS junk
 .DS_Store
